@@ -2,6 +2,7 @@ import React  from "react";
 import "./index.css";
 
 export default function Calculator() {
+
   return (
     <div className="layout-column align-items-center">
       <div data-testid="total-operations" className="pt-50 total-operations"></div>
