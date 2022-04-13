@@ -43,8 +43,9 @@ export default function Calculator() {
   const reset = () => {
     setValue1("");
     setValue2("");
-    setCount(0);
+    setCount(1);
     setResult(null);
+    setLabel("+");
   };
 
   return (
