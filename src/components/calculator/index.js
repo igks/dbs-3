@@ -6,25 +6,30 @@ export default function Calculator() {
   const [result, setResult] = useState(null);
   const [value1, setValue1] = useState(null);
   const [value2, setValue2] = useState(null);
+  const [label, setLabel] = useState("+");
 
   const add = () => {
     setResult(parseInt(value1) + parseInt(value2));
     setCount(count + 1);
+    setLabel("+");
   };
 
   const subtract = () => {
     setResult(parseInt(value1) - parseInt(value2));
     setCount(count + 1);
+    setLabel("-");
   };
 
   const multiply = () => {
     setResult(parseInt(value1) * parseInt(value2));
     setCount(count + 1);
+    setLabel("*");
   };
 
   const divide = () => {
     setResult(parseInt(value1) / parseInt(value2));
     setCount(count + 1);
+    setLabel("/");
   };
 
   const updateValue1 = (value) => {
@@ -63,7 +68,9 @@ export default function Calculator() {
             <label
               className="ml-2 mr-2 symbol text-center"
               data-testid="selected-operator"
-            ></label>
+            >
+              {label}
+            </label>
             <input
               type="number"
               data-testid="app-input2"
